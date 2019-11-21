@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         CustomData(title: "test2", image: #imageLiteral(resourceName: "sincerely-media-0LKJVPJtDnQ-unsplash"), url: "maxcode.io/courses"),
         CustomData(title: "test3", image: #imageLiteral(resourceName: "jed-villejo-ZlnDr_5FgHQ-unsplash"), url: "maxcode.io/courses"),
         CustomData(title: "test4", image: #imageLiteral(resourceName: "anton-levin-P8prss71psk-unsplash"), url: "maxcode.io/courses"),
+        CustomData(title: "test4", image: #imageLiteral(resourceName: "bruno-cervera-TVmskAtKQlQ-unsplash"), url: "maxcode.io/courses"),
+        CustomData(title: "test4", image: #imageLiteral(resourceName: "Image from iOS"), url: "maxcode.io/courses"),
+        CustomData(title: "test4", image: #imageLiteral(resourceName: "insung-yoon-YWS9jxfkYTw-unsplash"), url: "maxcode.io/courses"),
+        CustomData(title: "test4", image: #imageLiteral(resourceName: "riley-UznvSv-TjNg-unsplash"), url: "maxcode.io/courses"),
         CustomData(title: "test5", image: #imageLiteral(resourceName: "johannes-plenio-Tuv7CxNlW1o-unsplash"), url: "maxcode.io/courses")
     ]
     
