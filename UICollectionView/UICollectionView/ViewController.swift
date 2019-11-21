@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
+        view.backgroundColor = .white
         collectionView.backgroundColor = .white
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
@@ -49,6 +50,16 @@ class ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if traitCollection.userInterfaceStyle == .light {
+            collectionView.backgroundColor = .white
+            view.backgroundColor = .white
+        } else {
+            collectionView.backgroundColor = .black
+            view.backgroundColor = .black
+        }
     }
     
     
