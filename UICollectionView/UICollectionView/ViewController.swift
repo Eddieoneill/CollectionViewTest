@@ -41,12 +41,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
-        view.backgroundColor = .white
-        collectionView.backgroundColor = .white
+//        view.backgroundColor = .white
+//        collectionView.backgroundColor = .white
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, constant: 0.5).isActive = true
+        
+        if traitCollection.userInterfaceStyle == .light {
+            collectionView.backgroundColor = .white
+            view.backgroundColor = .white
+        } else {
+            collectionView.backgroundColor = .black
+            view.backgroundColor = .black
+        }
         
         collectionView.delegate = self
         collectionView.dataSource = self
