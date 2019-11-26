@@ -41,33 +41,32 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
-//        view.backgroundColor = .white
-//        collectionView.backgroundColor = .white
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, constant: 0.5).isActive = true
         
-        if traitCollection.userInterfaceStyle == .light {
-            collectionView.backgroundColor = .white
-            view.backgroundColor = .white
-        } else {
-            collectionView.backgroundColor = .black
-            view.backgroundColor = .black
-        }
+        changeColor()
         
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func changeColor() {
         if traitCollection.userInterfaceStyle == .light {
             collectionView.backgroundColor = .white
             view.backgroundColor = .white
+            print("hell")
         } else {
             collectionView.backgroundColor = .black
             view.backgroundColor = .black
+            print("hello")
         }
+    }
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        changeColor()
     }
     
     
@@ -101,7 +100,7 @@ class CustomCell: UICollectionViewCell {
     }
     
     fileprivate let bg: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "jed-villejo-ZlnDr_5FgHQ-unsplash")
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
